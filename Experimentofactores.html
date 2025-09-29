@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factores y Experimento sobre Vitaminas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #F7FCE9;
+      color: #333;
+    }
+
+    .barra-global {
+      background: #2C3E15;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .barra-global a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .barra-global a:hover {
+      color: #FFD700;
+    }
+
+    header {
+      background: #6A8A2D;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+nav {
+      background: #778C43;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 950px;
+      margin: 20px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #6A8A2D;
+    }
+
+    ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .quiz {
+      margin-top: 20px;
+      background: #F9FBE7;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    button {
+      background: #6A8A2D;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #90C02E;
+    }
+
+    #resultado {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #6A8A2D;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra global -->
+  <div class="barra-global">
+    <a href="index.html">Inicio</a>
+    <a href="vitaminas.html">¿Qué son?</a>
+    <a href="clasificacionfuncion.html">Clasificación y Funciones</a>
+    <a href="importanciaparalasalud.html">Importancia</a>
+    <a href="Experimentofactores.html">Factores y Experimento</a>
+  </div>
+
+  <header>
+    <h1>Factores y Experimento</h1>
+    <p>Durabilidad de las vitaminas y su estudio práctico</p>
+  </header>
+
+  <section>
+    <h2>Factores que influyen en la durabilidad de las vitaminas</h2>
+    <ul>
+      <li><strong>Luz solar:</strong> puede destruir vitaminas sensibles como la C y la A.</li>
+      <li><strong>Temperatura:</strong> el calor excesivo degrada vitaminas hidrosolubles.</li>
+      <li><strong>Oxígeno:</strong> la exposición al aire oxida vitaminas como la E y C.</li>
+      <li><strong>pH:</strong> ambientes muy ácidos o básicos afectan la estabilidad vitamínica.</li>
+      <li><strong>Almacenamiento:</strong> una mala conservación reduce su efectividad.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experimento escolar</h2>
+    <p><strong>Pregunta:</strong> ¿La vitamina C en el jugo de naranja se degrada con la exposición al calor?</p>
+    <p><strong>Hipótesis:</strong> Si el jugo de naranja se expone al calor, entonces perderá vitamina C más rápidamente.</p>
+    <p><strong>Variables:</strong></p>
+    <ul>
+      <li><em>Independiente:</em> temperatura (frío, ambiente, calor).</li>
+      <li><em>Dependiente:</em> cantidad de vitamina C.</li>
+      <li><em>Controladas:</em> mismo jugo, mismo tiempo de exposición.</li>
+    </ul>
+    <p><strong>Materiales:</strong> jugo de naranja, vasos, termómetro, cocina eléctrica, reactivo de yodo para vitamina C.</p>
+    <p><strong>Procedimiento:</strong></p>
+    <ol>
+      <li>Divide el jugo en tres vasos iguales.</li>
+      <li>Mantén uno en frío, otro a temperatura ambiente y otro caliéntalo.</li>
+      <li>Añade gotas de yodo a cada muestra y compara el cambio de color.</li>
+      <li>Registra los resultados y analiza.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Actividades interactivas</h2>
+    <div class="quiz">
+      <p><strong>Pregunta:</strong> ¿Qué factor destruye más rápido la vitamina C?</p>
+      <button onclick="verificar('a')">a) El frío</button>
+      <button onclick="verificar('b')">b) El calor</button>
+      <button onclick="verificar('c')">c) La oscuridad</button>
+      <p id="resultado"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Factores y experimento de vitaminas</p>
+  </footer>
+
+  <script>
+    function verificar(opcion) {
+      const resultado = document.getElementById('resultado');
+      if (opcion === 'b') {
+        resultado.textContent = "✅ Correcto: el calor acelera la pérdida de vitamina C.";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "❌ Incorrecto, intenta de nuevo.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
